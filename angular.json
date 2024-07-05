@@ -5,7 +5,7 @@
   "projects": {
     "ng-select-demo": {
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "projects/ng-select-demo/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {
@@ -18,17 +18,17 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/ng-select-demo",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "index": "projects/ng-select-demo/src/index.html",
+            "main": "projects/ng-select-demo/src/main.ts",
+            "polyfills": "projects/ng-select-demo/src/polyfills.ts",
+            "tsConfig": "projects/ng-select-demo/src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/ng-select-demo/src/favicon.ico",
+              "projects/ng-select-demo/src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/style/base.scss"
+              "projects/ng-select-demo/src/styles.css",
+              "projects/ng-select-demo/src/style/base.scss"
             ],
             "scripts": [
               "lib/highlight/highlight.pack.js"
@@ -38,8 +38,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "projects/ng-select-demo/src/environments/environment.ts",
+                  "with": "projects/ng-select-demo/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -81,17 +81,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
+            "main": "projects/ng-select-demo/src/test.ts",
+            "polyfills": "projects/ng-select-demo/src/polyfills.ts",
+            "tsConfig": "projects/ng-select-demo/src/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-select-demo/src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "projects/ng-select-demo/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/ng-select-demo/src/favicon.ico",
+              "projects/ng-select-demo/src/assets"
             ]
           }
         },
@@ -99,8 +99,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "projects/ng-select-demo/src/tsconfig.app.json",
+              "projects/ng-select-demo/src/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -144,7 +144,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ng-select/tsconfig.lib.json",
             "project": "projects/ng-select/ng-package.json"
@@ -173,5 +173,5 @@
       }
     }
   },
-  "defaultProject": "ng-select-demo"
+  "defaultProject": "ng-select"
 }
